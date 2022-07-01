@@ -1,6 +1,15 @@
 import Layout from '@c/Layout'
 import { Grid, Card } from '@c/Grid'
+import styled from 'styled-components'
 import { Title, SubTitle } from '@c/Title'
+
+const Box = styled.div`
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  display:flex;
+  flex-direction:column;
+`
 
 export default function Home() {
   return (
@@ -11,7 +20,7 @@ export default function Home() {
         A Next.js application for displaying fictional live events retrieved from GraphCMS
       </SubTitle>
 
-      <Grid>
+      <Box>
         <Card href="/readme" header="README">
           <p>Check the README for details on how to work on this project.</p>
         </Card>
@@ -21,7 +30,7 @@ export default function Home() {
         <Card href="/schemas" header="Schemas">
           <p>View the full schemas for data stored in the GraphCMS database.</p>
         </Card>
-      </Grid>
+      </Box>
     </Layout>
   )
 }
